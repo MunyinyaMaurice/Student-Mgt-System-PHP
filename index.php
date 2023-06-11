@@ -28,9 +28,7 @@
             <li>
                 Admission
             </li>
-            <li class="btn btn-success">
-                Login
-            </li>
+            <li><a href="login.php" class="btn btn-success">Login</a></li>
         </ul>
     </nav>
     
