@@ -29,6 +29,7 @@
                 Admission
             </li>
             <li><a href="login.php" class="btn btn-success">Login</a></li>
+            <li><a href="signup.php" class="btn btn-success">Sign up</a></li>
         </ul>
     </nav>
     
