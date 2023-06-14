@@ -31,7 +31,7 @@ header("location:login.php");
 
 	<header class="header">
 		
-		<a href="">Admin Dashboard</a>
+		<a href="">Student Dashboard</a>
 
 		<div class="logout">
 			

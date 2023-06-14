@@ -40,7 +40,8 @@
 				</h4>
 			</center>
 			
-			<form action="login_check.php" method="POST" class="login_form">
+			<form action="signup_check.php" method="POST" class="login_form">
+            <input type="text" name="username" hidden>
 				
 				<div>
 					<label class="label_deg">Username</label>
@@ -52,16 +53,22 @@
 					<input type="Password" name="password">
 				</div>
 
-<div>
+                <div>
 					<label class="label_deg">phone</label>
-					<input type="text" name="username">
+					<input type="text" name="phone">
 				</div>
-
+                
 				<div>
 					<label class="label_deg">email</label>
-					<input type="Password" name="password">
+					<input type="text" name="email">
 				</div>
 
+                <div>
+					<label class="label_deg">User type</label>
+					<input type="text" name="usertype">
+				</div>
+
+				
 				<div>
 					
 					<input class="btn btn-primary" type="submit" name="submit" value="Login">
