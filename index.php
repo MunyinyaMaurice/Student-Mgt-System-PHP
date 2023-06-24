@@ -1,3 +1,18 @@
+<?php
+error_reporting(0);
+session_start();
+session_destroy();
+
+if($_SESSION['message'])
+{
+$message= $_SESSION['message'];
+echo "<script type='text/javascript'>
+alert('$message');
+</script>";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +118,7 @@
 	</center>
     
 	<div align="center">
-    <form >
+    <form action="data_check.php" method="post">
         <div class="adm_int">
 <label class="label_text"> Name</label>
 <input type="text" class="input_deg" id="name" name="name" >
@@ -120,10 +135,10 @@
 
 <div class="adm_int">
 <label class="label_text"> Message</label>
-<textarea class="input_txt"></textarea>
+<textarea class="input_txt" name="message"></textarea>
 </div>
 <div class="adm_int">
-<input type="submit" class="btn btn-primary" value="Apply" id="submit">
+<input type="submit" class="btn btn-primary" value="Apply" name="apply" id="submit">
 </div>
     </form>
 </div>
