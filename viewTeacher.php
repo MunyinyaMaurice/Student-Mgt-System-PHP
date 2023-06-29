@@ -23,7 +23,7 @@ $db="schoolproject";
 
 $data=mysqli_connect($host,$user,$password,$db);
 
-$sql ="select * from student";
+$sql ="select * from teacher";
 $result= mysqli_query($data,$sql);
 ?>
 <!DOCTYPE html>
@@ -44,23 +44,21 @@ include 'admin_sider.php';
 
 	<div class="content">
 		<center>
-		<h1>List of Student for admission</h1>
+		<h1>List of Teachers</h1>
 <table border="1px ">
 
 <tr>
-<th style="padding:20 px; font-size: 15px;" >Student Id</th>
+
     <th style="padding:20 px; font-size: 15px;" >Name</th>
     <th style="padding:20 px; font-size: 15px;">Email</th>
+    <th style="padding:20 px; font-size: 15px;">Phone</th>
     <th style="padding:20 px; font-size: 15px;">Address</th>
-    <th style="padding:20 px; font-size: 15px;">Age</th>
+    
 </tr>
 <?php
 while($info=$result ->fetch_assoc()){
 ?>
 <tr>
-    <td style="padding:20 px;"> 
-<?php  echo  "{$info['stId']}"; ?>
-</td>
 
 <td style="padding:20 px;"> 
 <?php  echo  "{$info['name']}"; ?>
@@ -70,13 +68,15 @@ while($info=$result ->fetch_assoc()){
     <?php  echo  "{$info['email']}"; ?>
 </td>
 
+<td style="padding:20 px;"> 
+    <?php  echo  "{$info['phone']}"; ?>
+</td>
+
     <td style="padding:20 px;">
     <?php  echo  "{$info['address']}"; ?>
 </td>
 
-    <td style="padding:20 px;"> 
-    <?php  echo  "{$info['age']}"; ?>
-</td>
+ 
 
 </tr>
 

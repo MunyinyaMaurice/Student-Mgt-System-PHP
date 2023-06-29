@@ -28,17 +28,17 @@
 			</li>
 
 			<li>
-				<a href="">Add Teacher</a>
+				<a href="addTeacher.php">Add Teacher</a>
 			</li>
 
 			<li>
-				<a href="">View Teacher</a>
+				<a href="viewTeacher.php">View Teacher</a>
 			</li>
 			<li>
-				<a href="">Add Courses</a>
+				<a href="addCourse.php">Add Courses</a>
 			</li>
 			<li>
-				<a href="">View Courses</a>
+				<a href="viewCourse.php">View Courses</a>
 			</li>
 
 
