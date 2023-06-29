@@ -20,11 +20,11 @@
 			</li>
 
 			<li>
-				<a href="">Add Student</a>
+				<a href="addStudent.php">Add Student</a>
 			</li>
 
 			<li>
-				<a href="">View Student</a>
+				<a href="viewStudent.php">View Student</a>
 			</li>
 
 			<li>
