@@ -21,9 +21,9 @@ if ($data === false) {
 
 if (isset($_POST['addStudent'])) {
     $stId = $_POST['stId'];
-    $name = $post['name'];
-    $email = $post['email'];
-    $address = $post['address'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $address = $_POST['address'];
     $age = $post['age'];
 
     $sql = "insert into student (stId,name,email,address,age) values('$stId','$name','$email','$address','$age')";

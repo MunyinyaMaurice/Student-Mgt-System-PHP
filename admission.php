@@ -8,7 +8,6 @@ elseif($_SESSION['usertype']=='user')
 header("location:login.php");
 } 
  
-
 error_reporting(0);
 session_start();
 
