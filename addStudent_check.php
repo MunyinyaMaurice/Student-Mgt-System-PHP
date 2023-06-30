@@ -34,7 +34,7 @@ if (isset($_POST['addStudent'])) {
 
         $message = "Inserted successful !!!";
         $_SESSION['message'] = $message;
-        header("location:index.php");
+        header("location:viewStudent.php");
 
     } else {
         $message = "sorry it is not inserted somthing went wrong !!!";

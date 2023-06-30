@@ -53,6 +53,8 @@ include 'admin_sider.php';
     <th style="padding:20 px; font-size: 15px;">Email</th>
     <th style="padding:20 px; font-size: 15px;">Address</th>
     <th style="padding:20 px; font-size: 15px;">Age</th>
+    <th style="padding:20 px; font-size: 15px;">Action</th>
+
 </tr>
 <?php
 while($info=$result ->fetch_assoc()){
@@ -78,6 +80,12 @@ while($info=$result ->fetch_assoc()){
     <?php  echo  "{$info['age']}"; ?>
 </td>
 
+<td style="padding:20 px;"> 
+    <?php  echo  "<a onclick =\" javascript: 
+    return confirm ('Are you sure you want to delete this? ');\"
+    href='delete.php?student_id={$info['stId']}'> Delete </a>"; 
+    ?>
+</td>
 </tr>
 
 <?php
