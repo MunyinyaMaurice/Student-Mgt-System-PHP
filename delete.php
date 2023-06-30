@@ -21,8 +21,8 @@ $sql ="delete from student where stId='$studId' ";
 $result= mysqli_query($data,$sql);
 
 if($result){
-    // $message="Are you sure you want to delete this?";
-    // $_SESSION['message']=$message;
+    $messages="Student Deleted sucessful !!!";
+    $_SESSION['messages']=$messages;
 
     header("location:viewStudent.php");
 }

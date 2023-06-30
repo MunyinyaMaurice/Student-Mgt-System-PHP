@@ -45,6 +45,15 @@ include 'admin_sider.php';
 	<div class="content">
 		<center>
 		<h1>List of Student for admission</h1>
+
+        <?php 
+       if ($_SESSION['messages']){
+      echo  $_SESSION['messages'];
+      
+       }
+       unset( $_SESSION['messages']);
+        ?>
+
 <table border="1px ">
 
 <tr>
