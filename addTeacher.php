@@ -18,7 +18,8 @@ include 'admin_sider.php';
 	</center>
     
 	<div align="center">
-    <form action="addTeacher_check.php" method="post">
+    <form action="addTeacher_check.php" method="post" 
+    enctype ="multipart/form-data">
         <div class="adm_int">
 <label class="label_text"> Teacher Name</label>
 <input type="text" class="input_deg" id="name" name="name" >
@@ -36,6 +37,11 @@ include 'admin_sider.php';
 <div class="adm_int">
 <label class="label_text"> Address</label>
 <input type="text" class="input_deg" id="address" name="address" >
+</div>
+
+<div class="adm_int">
+<label class="label_text"> </label>
+<input type="file" class="input_deg" id="file" name="file" >
 </div>
 
 
