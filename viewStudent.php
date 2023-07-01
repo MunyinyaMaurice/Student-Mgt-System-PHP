@@ -92,8 +92,14 @@ while($info=$result ->fetch_assoc()){
 <td style="padding:20 px;"> 
     <?php  echo  "<a onclick =\" javascript: 
     return confirm ('Are you sure you want to delete this? ');\"
-    href='delete.php?student_id={$info['stId']}'> Delete </a>"; 
+    href='delete.php?student_id={$info['stId']}'  class=' btn btn-danger'> Delete </a>"; 
     ?>
+
+<?php  echo  "<a onclick =\" javascript: 
+    return confirm ('Are you sure you want to update this? ');\"
+    href='updateStudent.php?student_id={$info['stId']}' class=' btn btn-primary'> Update </a>"; 
+    ?>
+
 </td>
 </tr>
 

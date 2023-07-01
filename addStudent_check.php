@@ -24,7 +24,7 @@ if (isset($_POST['addStudent'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $address = $_POST['address'];
-    $age = $post['age'];
+    $age = $_POST['age'];
 
     $sql = "insert into student (stId,name,email,address,age) values('$stId','$name','$email','$address','$age')";
 
