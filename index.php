@@ -94,13 +94,14 @@ $result= mysqli_query($data,$sql);
 
         ?>
             <div class="col-md-4">
-            <img class="teacher" src="teacher1.jpg">
+            <img class="teacher" src="<?php echo "{$info ['image']}"?>">
         <h3><?php echo "{$info ['name']}"?></h3>
         <h5><?php echo "{$info ['email']}"?></h5>
         <h5><?php echo "{$info ['address']}"?></h5>
 
            </div>
            <?php 
+           
         }
     ?>
         </div>
