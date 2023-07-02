@@ -40,8 +40,8 @@ include 'admin_sider.php';
 </div>
 
 <div class="adm_int">
-<label class="label_text"> </label>
-<input type="file" class="input_deg" id="file" name="file" >
+<label class="label_text">Image </label>
+<input type="file" class="input_deg" name="image" >
 </div>
 
 
