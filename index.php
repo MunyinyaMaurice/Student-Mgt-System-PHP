@@ -10,7 +10,23 @@ echo "<script type='text/javascript'>
 alert('$message');
 </script>";
 }
+
+
+$host="localhost";
+
+$user="root";
+
+$password="";
+
+$db="schoolproject";
+
+
+$data=mysqli_connect($host,$user,$password,$db);
+
+$sql ="select * from teacher";
+$result= mysqli_query($data,$sql);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -69,26 +85,28 @@ alert('$message');
     <center>
 		<h1>Our Teachers</h1>
 	</center>
-
+    
     <div class="container">
+        
         <div class="row">
+        <?php 
+        while($info= $result -> fetch_assoc()){
+
+        ?>
             <div class="col-md-4">
             <img class="teacher" src="teacher1.jpg">
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
-            </div>
+        <h3><?php echo "{$info ['name']}"?></h3>
+        <h5><?php echo "{$info ['email']}"?></h5>
+        <h5><?php echo "{$info ['address']}"?></h5>
 
-            <div class="col-md-4">
-            <img class="teacher" src="teacher2.jpg">
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
-            </div>
-
-            <div class="col-md-4">
-            <img class="teacher" src="teacher3.jpg">
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
-            </div>            
+           </div>
+           <?php 
+        }
+    ?>
+        </div>
         </div>
     
-    </div>
+   
 
     <center>
 		<h1>Our Courses</h1>
