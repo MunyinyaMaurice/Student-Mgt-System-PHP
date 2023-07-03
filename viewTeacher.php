@@ -45,6 +45,13 @@ include 'admin_sider.php';
 	<div class="content">
 		<center>
 		<h1>List of Teachers</h1>
+
+        <h5 style="color: green;"><?php 
+        if($_SESSION['messages']){
+echo $_SESSION['messages'];
+        }
+        unset($_SESSION['messages']);
+        ?></h5>
 <table border="1px ">
 
 <tr>
@@ -53,6 +60,8 @@ include 'admin_sider.php';
     <th style="padding:20 px; font-size: 15px;">Email</th>
     <th style="padding:20 px; font-size: 15px;">Phone</th>
     <th style="padding:20 px; font-size: 15px;">Address</th>
+    <th style="padding:20 px; font-size: 15px;">Image</th>
+    <th style="padding:20 px; font-size: 15px; "colspan='2'>Action</th>
     
 </tr>
 <?php
@@ -76,7 +85,20 @@ while($info=$result ->fetch_assoc()){
     <?php  echo  "{$info['address']}"; ?>
 </td>
 
- 
+<td style="padding:20 px;">
+   <img src=" <?php  echo  "{$info['image']}"; ?>" width="75px"; height="80px";>
+</td>
+
+<td style="padding:20 px;">
+  <?php  echo  "<a onclick=\" javascript:
+   return confirm ('are you sure you want to delete this ?');\"
+   href='deleteTeacher.php?teacher_id={$info['id']} '> Delete </a>"; ?>
+</td>
+<td style="padding:20 px;">
+  <?php  echo  "<a onclick=\" javascript:
+   return confirm ('are you sure you want to update this ?');\"
+   href='updateTeacher.php?teacher_id={$info['id']} '> Update </a>"; ?>
+</td>
 
 </tr>
 
